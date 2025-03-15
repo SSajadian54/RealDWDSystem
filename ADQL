@@ -1,0 +1,143 @@
+SELECT tw.source_id,   tw.period,  tw.mass_ratio,  tw.eccentricity,  tw.inclination,  
+tw.a_thiele_innes, tw.b_thiele_innes,  tw.f_thiele_innes,  tw.g_thiele_innes
+FROM gaiadr3.nss_two_body_orbit AS tw
+
+
+
+SELECT tw.source_id,   tw.period,  tw.mass_ratio,  tw.eccentricity,  tw.inclination,  
+tw.a_thiele_innes, tw.b_thiele_innes,  tw.f_thiele_innes,  tw.g_thiele_innes
+FROM gaiadr3.nss_two_body_orbit AS tw
+
+
+SELECT tw.source_id,   tw.period,  tw.mass_ratio,  tw.eccentricity,  tw.inclination,  
+tw.a_thiele_innes, tw.b_thiele_innes,  tw.f_thiele_innes,  tw.g_thiele_innes
+FROM gaiadr3.nss_two_body_orbit AS tw
+
+
+################################################################
+
+SELECT 
+gs.source_id, gs.parallax, gs.ruwe,  gs.pmra,  gs.pmdec,  gs.l,   gs.b, 
+gs.phot_g_mean_mag,  gs.phot_bp_mean_mag,  gs.phot_rp_mean_mag,  gs.radial_velocity,  gs.phot_variable_flag,  
+ap.teff_msc1,  ap.logg_msc1,  ap.age_flame,  ap.mh_msc,  ap.azero_msc,  ap.mass_flame, ap.lum_flame,  ap.radius_flame,
+ap.evolstage_flame,   tw.period,  tw.mass_ratio,  tw.eccentricity,  tw.inclination,  
+tw.a_thiele_innes, tw.b_thiele_innes,  tw.f_thiele_innes,  tw.g_thiele_innes, bm.m2,  bm.fluxratio 
+
+FROM  gaiadr3.gaia_source AS gs   
+JOIN    gaiadr3.astrophysical_parameters AS ap  USING (source_id)
+JOIN    gaiadr3.nss_two_body_orbit AS tw USING (source_id)
+JOIN    gaiadr3.binary_masses AS   bm   USING (source_id)
+
+WHERE (
+gs.source_id='3918451500552407552'  OR 
+gs.source_id='3683519503881169920'  OR 
+gs.source_id='3924429545272998528'  OR 
+gs.source_id='3945572123083449984'  OR 
+gs.source_id='3777028806000016896'  OR 
+gs.source_id='3560121520055252480'  OR 
+gs.source_id='3831059120921201280'  OR 
+gs.source_id='3860381618565361024'  OR 
+gs.source_id='3942794550553585920'  OR 
+gs.source_id='3834915417437497088'  OR 
+gs.source_id='4012920577539057536'  OR 
+gs.source_id='3853617934132069760'  OR 
+gs.source_id='4028597414327329664'  OR 
+gs.source_id='6290856877832637568'  OR 
+gs.source_id='6182278665776280320'  OR 
+gs.source_id='3643117777319641728'  OR 
+gs.source_id='3668430081179262208'  OR 
+gs.source_id='1176091959816638208'  OR 
+gs.source_id='6300000214666201472'  OR 
+gs.source_id='5440309630736138752'  OR 
+gs.source_id='6216887306090464000'  OR 
+gs.source_id='6118774855590759808'  OR 
+gs.source_id='800869945957764736'  OR 
+gs.source_id='1548104507825815296'  OR 
+gs.source_id='6059125804360160640'  OR 
+gs.source_id='913951006022466688'  OR 
+gs.source_id='4411741894799595776'  OR 
+gs.source_id='5725503293214289280'  OR 
+gs.source_id='5903942210661269760'  OR 
+gs.source_id='1605880472314446976'  OR 
+gs.source_id='4345695811863179264'  OR 
+gs.source_id='4437836226304032384'  OR 
+gs.source_id='864329359065649280'  OR 
+gs.source_id='881086019353249280'  OR 
+gs.source_id='4437047292355076480'  OR 
+gs.source_id='4464071428437816960'  OR 
+gs.source_id='4357309158618673024'  OR 
+gs.source_id='1612930167210138880'  OR 
+gs.source_id='1329148518184242688'  OR 
+gs.source_id='5232556255843992576'  OR 
+gs.source_id='4384149753578863744'  OR 
+gs.source_id='5992085728570051840'  OR 
+gs.source_id='1078143894896636672'  OR 
+gs.source_id='4333046892662353152'  OR 
+gs.source_id='3157331270765372800'  OR 
+gs.source_id='1306782179636355072'  OR 
+gs.source_id='1411958889265082496'  OR 
+gs.source_id='5490140356700680576'  OR 
+gs.source_id='944187919382385152'  OR 
+gs.source_id='1360962371737364096'  OR 
+gs.source_id='4550719958390541824'  OR 
+gs.source_id='3000597125173673088'  OR 
+gs.source_id='4118795129233260160'  OR 
+gs.source_id='1114002611211881856'  OR 
+gs.source_id='3458547708169271424'  OR 
+gs.source_id='3444746427772519296'  OR 
+gs.source_id='2151534115695067264'  OR 
+gs.source_id='4588070505828585984'  OR 
+gs.source_id='4761389616087396096'  OR 
+gs.source_id='2287248210301342336'  OR 
+gs.source_id='2155188926705745536'  OR 
+gs.source_id='4079513805001070720'  OR 
+gs.source_id='2098661762613244160'  OR 
+gs.source_id='3394087945636978432'  OR 
+gs.source_id='4511728046261383808'  OR 
+gs.source_id='4279269469712040832'  OR 
+gs.source_id='4098883351579680256'  OR 
+gs.source_id='2273583445431091584'  OR 
+gs.source_id='3387904051723656320'  OR 
+gs.source_id='4876689387538123008'  OR 
+gs.source_id='258229174890841344'  OR 
+gs.source_id='521679857492242048'  OR 
+gs.source_id='6450880899650573440'  OR 
+gs.source_id='2186925397832320512'  OR 
+gs.source_id='245807579721338752'  OR 
+gs.source_id='3314232855652895104'  OR 
+gs.source_id='518137368471752960'  OR 
+gs.source_id='513958743252720768'  OR 
+gs.source_id='4701214616008598144'  OR 
+gs.source_id='6388800037900418304'  OR 
+gs.source_id='150804964714568320'  OR 
+gs.source_id='2074030434439821696'  OR 
+gs.source_id='3192967924382400256'  OR 
+gs.source_id='1820678800528443776'  OR 
+gs.source_id='2027615341341444608'  OR 
+gs.source_id='2176337551845050240'  OR 
+gs.source_id='6461421956281723392'  OR 
+gs.source_id='1816934070031522688'  OR 
+gs.source_id='6576232101460909056'  OR 
+gs.source_id='1866421507854017920'  OR 
+gs.source_id='6501258877464064896'  OR 
+gs.source_id='1845354620239612928'  OR 
+gs.source_id='394161419479425152'  OR 
+gs.source_id='6790884155913810816'  OR 
+gs.source_id='324360843637097728'  OR 
+gs.source_id='4987241673937733376'  OR 
+gs.source_id='5130647913235697664'  OR 
+gs.source_id='6898681169253935488'  OR 
+gs.source_id='6616573488025635456'  OR 
+gs.source_id='379359102453525376'  OR 
+gs.source_id='1900545847646195840'  OR 
+gs.source_id='2671638261348712832'  OR 
+gs.source_id='1911816151065187456'  OR 
+gs.source_id='2723952371763354368'  OR 
+gs.source_id='2865998351972049664'  OR 
+gs.source_id='2451154710754640640'  OR 
+gs.source_id='2864507860881192320'  OR 
+gs.source_id='2831141325109690112'  OR 
+gs.source_id='2532386178842839424'  OR 
+gs.source_id='2638099999900735360'  OR 
+gs.source_id='2630815357409558400'  OR 
+gs.source_id='2542961560852591744'  )
